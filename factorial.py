@@ -1,5 +1,11 @@
-num = int(input("Enter a number: "))
-fact = 1
-for i in range(2,num+1):
-    fact = fact*i
-print("the factorial of ",num," is ",fact)
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fact(n - 1)
+n= int(input("enter the number of terms: "))
+result = 0
+for i in range(1, n + 1):
+        f=fact(i)
+        result = result + (pow(i, i)/f)
+print("sum of series is", result)
